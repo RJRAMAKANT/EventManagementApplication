@@ -1,0 +1,74 @@
+//CREATING SEQUENCES FOR PhotoAdmin
+CREATE SEQUENCE Photoadmin1
+INCREMENT BY 1
+START WITH 1
+MINVALUE 1;
+
+//CREATING SEQUENCES FOR PhotoUser
+CREATE SEQUENCE PhotoUser1
+INCREMENT BY 1
+START WITH 1
+MINVALUE 1;
+
+//CREATING SEQUENCES FOR PhotoBooking
+CREATE SEQUENCE PhotoBooking1
+INCREMENT BY 1
+START WITH 1
+MINVALUE 1;
+
+//CREATING SEQUENCES FOR PhotoGallery
+CREATE SEQUENCE PhotoGallery1
+INCREMENT BY 1
+START WITH 1
+MINVALUE 1;
+
+//CREATE TABLE GALLERYUSER
+CREATE TABLE GALLERYUSER(ID INT,FNAME VARCHAR2(20),LNAME VARCHAR2(20),EMAIL VARCHAR2(45),PASSWORD VARCHAR2(30),MOB NUMBER(12),
+GENDER VARCHAR2(7),PRIMARY KEY(EMAIL,PASSWORD));
+
+
+//CREATE TABLE PHOTOADMIN
+ CREATE TABLE PHOTOADMIN(
+  2      AID INT,
+  3      FNAME VARCHAR2(20),
+  4      LNAME VARCHAR2(20),
+  5      EMAIL VARCHAR2(45),
+  6      PHONE NUMBER(12),
+  7      PASSWORD VARCHAR2(30),
+  8      ACITY VARCHAR2(20),
+  9      DIST VARCHAR2(20),
+ 10      PIN NUMBER(7),
+ 11      STATE VARCHAR2(15),
+ 12      GENDER VARCHAR2(7),
+ 13      PRIMARY KEY (EMAIL, PASSWORD)
+ 14  );
+
+
+
+//CREATE TABLE EVENTBOOKING
+CREATE TABLE EventBooking(ID INT,NAME VARCHAR2(30),mobile number(12),amobile number(12),edate VARCHAR2(20),etype varchar2(15),
+budget varchar2(15),address varchar2(50),status varchar2(20),userid int);
+
+//create sequence ebooking
+create sequence ebooking1
+start with 1
+increment by 1
+minvalue 1;
+
+// CREATE FEEDBACK FORM 
+create table FeedbackForm(userid int,username varchar2(20),usermail varchar2(30),userphone varchar2(15),Satisfy varchar2(7),suggession varchar2(150));
+
+//create sequence team
+create sequence teamid
+start with 10001
+increment by 1
+minvalue 1;
+
+//Team Table
+ create table Team(userid int,mname varchar2(20),mobile varchar2(15),email varchar2(40),position varchar2(20),address varchar(50),
+ active varchar2(8),dob varchar2(12));
+
+ //insert into table
+  insert into team values(9999,'Rj Ramakant','7751975616','rjramakant@gmail.com','Founder','Odisha','ACTIVE','01-01-2020');
+
+  commit;
